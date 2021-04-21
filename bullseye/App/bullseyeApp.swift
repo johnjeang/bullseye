@@ -11,7 +11,8 @@ import SwiftUI
 struct bullseyeApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+              .environmentObject(GameState(50.0))
         }
     }
 }
