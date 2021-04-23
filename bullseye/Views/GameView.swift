@@ -19,46 +19,25 @@ struct GameView: View {
   
   var body: some View {
     ZStack {
-      Color("BackgroundColor")
-        .edgesIgnoringSafeArea(.all)
+      BackgroundView(game: $game)
       VStack{
         InstructionsView(game: $game)
-        HStack{
-          Text("1")
-            .foregroundColor(Color("TextColor"))
-            .bold()
-          
-          Slider(value: $state.guess, in: 0.0...100.0)
-          
-          Text("100")
-            .foregroundColor(Color("TextColor"))
-            .bold()
+          .padding(.bottom, alertVisible ? 0 : 100)
+        if alertVisible{
+          PointsView(alertVisible: $alertVisible, game: $game)
+            .transition(.scale)
         }
-        .padding()
-        Button(action:{
-                alertVisible = true})
-        {
-          Text("Hit me!".uppercased())
-            .bold()
-            .font(.title3)
+        else{
+          HitMeButton(alertVisible: $alertVisible, game: $game)
+            .transition(.scale)
         }
-        .padding(20.0)
-        .foregroundColor(.white)
-        .background(
-          ZStack {
-            Color("ButtonColor")
-            LinearGradient(gradient: Gradient(colors: [Color.white.opacity(0.25), Color.clear]), startPoint: .top, endPoint: .bottom)
-          }
-        )
-        .accentColor(.black)
-        .cornerRadius(21)
-        .alert(isPresented: $alertVisible,
-               content: {
-                let guess = Int(state.guess.rounded())
-                return Alert(title: Text("Boom!"), message: Text("You guessed \(Int(state.guess.rounded())) \n You scored \(game.points(guess, game.target)) points"), dismissButton:
-                              .default(Text("Awesome")))
-               })
+
       }
+      if !alertVisible{
+        SliderView(text1: "1", text2: "100")
+          .transition(.scale)
+      }
+
     }
   }
 }
@@ -80,8 +59,11 @@ struct InstructionsView: View{
 struct ContentView_Previews: PreviewProvider {
   static var previews: some View {
     GameView()
+      .preferredColorScheme(.dark)
+      .environmentObject(GameState(50.0))
+    GameView()
       //.preferredColorScheme(.dark)
-      .environmentObject(GameState(10.0))
+      .environmentObject(GameState(50.0))
     /*
     GameView()
       .previewLayout(.fixed(width: 568, height: 320))

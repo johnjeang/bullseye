@@ -16,6 +16,11 @@
 		A46070112624744100D9AEFF /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46070102624744100D9AEFF /* Game.swift */; };
 		A460701B2624753300D9AEFF /* bullseyeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A460701A2624753300D9AEFF /* bullseyeTests.swift */; };
 		A4BA295D2630AB4600E71FFE /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA295C2630AB4600E71FFE /* TextViews.swift */; };
+		A4BA296126312E6200E71FFE /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA296026312E6200E71FFE /* Shapes.swift */; };
+		A4BA29652631310300E71FFE /* RoundViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA29642631310300E71FFE /* RoundViews.swift */; };
+		A4BA29692631F77900E71FFE /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA29682631F77900E71FFE /* BackgroundView.swift */; };
+		A4BA296D26334B6700E71FFE /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA296C26334B6600E71FFE /* PointsView.swift */; };
+		A4BA29712633656B00E71FFE /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4BA29702633656B00E71FFE /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +47,11 @@
 		A460701A2624753300D9AEFF /* bullseyeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bullseyeTests.swift; sourceTree = "<group>"; };
 		A460701C2624753300D9AEFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4BA295C2630AB4600E71FFE /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		A4BA296026312E6200E71FFE /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		A4BA29642631310300E71FFE /* RoundViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundViews.swift; sourceTree = "<group>"; };
+		A4BA29682631F77900E71FFE /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		A4BA296C26334B6600E71FFE /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		A4BA29702633656B00E71FFE /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +123,10 @@
 				A4606FB0261E84ED00D9AEFF /* GameView.swift */,
 				A4BA295C2630AB4600E71FFE /* TextViews.swift */,
 				A46070062620DA1500D9AEFF /* HomeView.swift */,
+				A4BA296026312E6200E71FFE /* Shapes.swift */,
+				A4BA29642631310300E71FFE /* RoundViews.swift */,
+				A4BA29682631F77900E71FFE /* BackgroundView.swift */,
+				A4BA296C26334B6600E71FFE /* PointsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -121,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				A46070102624744100D9AEFF /* Game.swift */,
+				A4BA29702633656B00E71FFE /* Models.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,10 +259,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4BA29712633656B00E71FFE /* Models.swift in Sources */,
+				A4BA29692631F77900E71FFE /* BackgroundView.swift in Sources */,
+				A4BA296126312E6200E71FFE /* Shapes.swift in Sources */,
+				A4BA29652631310300E71FFE /* RoundViews.swift in Sources */,
 				A4606FFC2620D08F00D9AEFF /* GameState.swift in Sources */,
 				A46070112624744100D9AEFF /* Game.swift in Sources */,
 				A4606FB1261E84ED00D9AEFF /* GameView.swift in Sources */,
 				A46070072620DA1500D9AEFF /* HomeView.swift in Sources */,
+				A4BA296D26334B6700E71FFE /* PointsView.swift in Sources */,
 				A4606FAF261E84ED00D9AEFF /* bullseyeApp.swift in Sources */,
 				A4BA295D2630AB4600E71FFE /* TextViews.swift in Sources */,
 			);
