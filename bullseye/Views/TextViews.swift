@@ -147,6 +147,45 @@ struct ButtonText: View{
       }
 }
 
+struct ScoreText: View{
+  var score: Int
+  var body: some View{
+    Text(String(score))
+      .bold()
+      .kerning(-0.2)
+      .foregroundColor(Color("TextColor"))
+      .font(.title3)
+  }
+}
+
+
+struct DateText: View{
+  var date: Date
+  var body: some View{
+    Text(date, style: .time)
+      .bold()
+      .kerning(-0.2)
+      .foregroundColor(Color("TextColor"))
+      .font(.title3)
+  }
+}
+
+struct BigBoldText: View{
+  let text: String
+  var body: some View{
+    Text(text.uppercased())
+      .font(.title)
+      .kerning(2.0)
+      .fontWeight(.black)
+  }
+}
+
+
+
+
+
+
+
 struct TextViews_Previews: PreviewProvider {
   static var previews: some View {
     VStack {
@@ -155,6 +194,9 @@ struct TextViews_Previews: PreviewProvider {
       BodyText(text: "You scored 200 points \n 🎉🎉🎉")
       ButtonText(text: "And you should be proud")
         .padding()
+      ScoreText(score: 45)
+      DateText(date: Date())
+      BigBoldText(text: "Let's see it")
     }
   }
 }
